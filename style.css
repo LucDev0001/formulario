@@ -1,0 +1,315 @@
+:root {
+    --primary-color: blueviolet;
+    --font-family: Arial, Helvetica, sans-serif;
+    --font-size-h2: 24px;
+    --font-size-input: 16px;
+}
+
+/* Reset de estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+   height: 100%;
+   display:flex;
+   flex-direction: column;
+
+   
+}
+
+.btn {
+    width: 90%;
+    height: 100px;
+    max-width: 450px;
+    line-height: 60px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif ;
+    text-transform: uppercase;
+   
+    text-align: center;
+    cursor: pointer;
+    background-color: blueviolet;
+    border-radius: 10px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.btn > h1{
+    color:white;
+    font-size: 24px;
+}
+
+/* Estilizando o span dentro da classe .btn */
+.btn span {
+    width: 90%;
+    position: absolute;
+    top: 80%;
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centralizar de forma correta */
+    line-height: 1.5; /* Melhor controle do espaçamento entre as linhas */
+    height: auto; /* Permite que a altura do span se ajuste ao conteúdo */
+    text-align: center;
+    font-size: 1vw; /* Responsividade com base na largura da tela */
+    padding: 10px;
+    background-color: white;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    border: 3px solid #007bff; /* Borda com uma cor mais moderna */
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3); /* Sombra suave */
+    transition: all 0.3s ease; /* Transição suave para interação */
+    max-width: 100%; /* Garante que o span não ultrapasse a largura */
+    box-sizing: border-box; /* Considera padding e bordas no cálculo da largura/altura */
+    white-space: nowrap; /* Impede quebra de linha no texto */
+    overflow: hidden; /* Oculta o excesso de texto caso necessário */
+    text-overflow: ellipsis; /* Adiciona "..." quando o texto for muito grande */
+}
+
+/* Efeito quando o mouse passa sobre o elemento */
+.btn span:hover {
+    border-color: #0056b3; /* Altera a cor da borda ao passar o mouse */
+    box-shadow: 0 8px 10px rgba(0, 123, 255, 0.4); /* Aumenta a sombra ao passar o mouse */
+    transform: translateX(-50%) translateY(-5%); /* Sobe o elemento ligeiramente */
+}
+
+/* Responsividade: Ajuste para telas menores */
+@media (max-width: 768px) {
+    .btn span {
+        font-size: 4vw; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn span {
+        font-size: 5vw; /* Ajuste ainda maior para telas muito pequenas */
+    }
+}
+
+
+
+
+.bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    flex-direction: column;
+}
+
+.form {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 450px;
+    padding: 2%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    z-index: 2;
+}
+
+
+
+/* Estilizando apenas o checkbox dentro do formulário com ID 'form1' */
+
+
+
+
+
+.form h2 {
+    font-size: var(--font-size-h2);
+    font-weight: bold;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    font-size: var(--font-size-input);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilo específico para o textarea */
+.form textarea {
+    resize: vertical; /* Permite que o usuário redimensione apenas verticalmente */
+    min-height: 100px; /* Define a altura mínima */
+}
+
+/* Estilo para o botão de submit */
+.form input[type="submit"]:hover {
+    background-color: darkviolet;
+    color: white;
+}
+
+.form .closeBtn {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    border-radius: 16px;
+    background-color: rgb(190, 190, 190);
+    color: blueviolet;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.form .closeBtn:hover {
+    color: darkviolet;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"] {
+    text-transform: capitalize;
+}
+
+
+
+
+/* Estilo para a página de Termos e Condições */
+.termos-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #444;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para a página de Política de Privacidade */
+.privacidade-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #444;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos do rodapé */
+footer {
+            
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif ;
+    text-transform: uppercase;
+    color: blueviolet;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+footer a {
+    color: blueviolet;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
