@@ -14,10 +14,8 @@
 
 html, body {
    height: 100%;
-   display:flex;
+   display: flex;
    flex-direction: column;
-
-   
 }
 
 .btn {
@@ -26,22 +24,20 @@ html, body {
     max-width: 450px;
     line-height: 60px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif ;
+    font-family: var(--font-family);
     text-transform: uppercase;
-   
     text-align: center;
     cursor: pointer;
     background-color: blueviolet;
     border-radius: 10px;
-    position:absolute;
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-   
 }
 
-.btn > h1{
-    color:white;
+.btn > h1 {
+    color: white;
     font-size: 24px;
 }
 
@@ -51,46 +47,50 @@ html, body {
     position: absolute;
     top: 80%;
     left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajuste para centralizar de forma correta */
-    line-height: 1.5; /* Melhor controle do espaçamento entre as linhas */
-    height: auto; /* Permite que a altura do span se ajuste ao conteúdo */
+    transform: translateX(-50%);
+    line-height: 1.5;
+    height: auto;
     text-align: center;
     font-size: 1vw; /* Responsividade com base na largura da tela */
     padding: 10px;
     background-color: white;
-    border-radius: 12px; /* Bordas mais arredondadas */
-    border: 3px solid #007bff; /* Borda com uma cor mais moderna */
-    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3); /* Sombra suave */
-    transition: all 0.3s ease; /* Transição suave para interação */
-    max-width: 100%; /* Garante que o span não ultrapasse a largura */
-    box-sizing: border-box; /* Considera padding e bordas no cálculo da largura/altura */
-    white-space: nowrap; /* Impede quebra de linha no texto */
-    overflow: hidden; /* Oculta o excesso de texto caso necessário */
-    text-overflow: ellipsis; /* Adiciona "..." quando o texto for muito grande */
+    border-radius: 12px;
+    border: 3px solid #007bff;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* Efeito quando o mouse passa sobre o elemento */
 .btn span:hover {
-    border-color: #0056b3; /* Altera a cor da borda ao passar o mouse */
-    box-shadow: 0 8px 10px rgba(0, 123, 255, 0.4); /* Aumenta a sombra ao passar o mouse */
-    transform: translateX(-50%) translateY(-5%); /* Sobe o elemento ligeiramente */
+    border-color: #0056b3;
+    box-shadow: 0 8px 10px rgba(0, 123, 255, 0.4);
+    transform: translateX(-50%) translateY(-5%);
 }
 
 /* Responsividade: Ajuste para telas menores */
 @media (max-width: 768px) {
     .btn span {
-        font-size: 4vw; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 4vw;
+    }
+    .btn {
+        width: 95%;
+        height: 80px;
     }
 }
 
 @media (max-width: 480px) {
     .btn span {
-        font-size: 5vw; /* Ajuste ainda maior para telas muito pequenas */
+        font-size: 5vw;
+    }
+    .btn {
+        width: 90%;
+        height: 70px;
     }
 }
-
-
-
 
 .bg {
     display: none;
@@ -119,14 +119,7 @@ html, body {
     z-index: 2;
 }
 
-
-
-/* Estilizando apenas o checkbox dentro do formulário com ID 'form1' */
-
-
-
-
-
+/* Estilos do formulário */
 .form h2 {
     font-size: var(--font-size-h2);
     font-weight: bold;
@@ -149,13 +142,11 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Estilo específico para o textarea */
 .form textarea {
-    resize: vertical; /* Permite que o usuário redimensione apenas verticalmente */
-    min-height: 100px; /* Define a altura mínima */
+    resize: vertical;
+    min-height: 100px;
 }
 
-/* Estilo para o botão de submit */
 .form input[type="submit"]:hover {
     background-color: darkviolet;
     color: white;
@@ -173,7 +164,7 @@ html, body {
     cursor: pointer;
     text-align: center;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-family);
     text-transform: uppercase;
     font-size: 16px;
     line-height: 30px;
@@ -189,58 +180,11 @@ html, body {
     text-transform: capitalize;
 }
 
-
-
-
-/* Estilo para a página de Termos e Condições */
-.termos-container {
+.termos-container, .privacidade-container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-h1 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.5em;
-    color: #444;
-    margin-top: 20px;
-}
-
-p {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6;
-}
-
-.back-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.back-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Estilo para a página de Política de Privacidade */
-.privacidade-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -282,11 +226,130 @@ ul {
     background-color: #0056b3;
 }
 
+/* Reset de estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos gerais para as páginas */
+h1, h2 {
+    color: #444;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* Container das páginas */
+.termos-container, .privacidade-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os links */
+a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para os botões de fechar */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .termos-container, .privacidade-container {
+        padding: 15px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .termos-container, .privacidade-container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .back-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Estilos adicionais para parágrafos e listas */
+p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+
 /* Estilos do rodapé */
 footer {
-            
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif ;
+    font-family: var(--font-family);
     text-transform: uppercase;
     color: blueviolet;
     text-align: center;
@@ -297,19 +360,35 @@ footer {
     width: 100%;
     font-size: 14px;
 }
+
 footer a {
     color: blueviolet;
     text-decoration: none;
 }
+
 footer a:hover {
     text-decoration: underline;
 }
 
+/* Responsividade adicional para conteúdo */
+@media (max-width: 768px) {
+    .termos-container, .privacidade-container {
+        max-width: 90%;
+    }
 
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
 
+@media (max-width: 480px) {
+    .termos-container, .privacidade-container {
+        max-width: 100%;
+        padding: 10px;
+    }
 
-
-
-
-
-
+    footer {
+        font-size: 10px;
+    }
+}
