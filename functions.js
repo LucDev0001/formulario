@@ -123,26 +123,27 @@ $(function () {
         return false; // Prevenir o envio padrão do formulário
     });
 
-    // Função para validar o nome
-    function validarNome(nome) {
-        var amount = nome.split(' ').length;
-        var splitStr = nome.split(' ');
+   // Função para validar o nome
+function validarNome(nome) {
+    var palavras = nome.trim().split(/\s+/); // Divide por espaços em branco, e usa trim() para remover espaços extras
 
-        // Valida se o nome tem pelo menos 2 palavras
-        if (amount < 2) {
+    // Valida se o nome tem pelo menos 2 palavras
+    if (palavras.length < 2) {
+        return false;
+    }
+
+    // Verifica se cada parte do nome começa com letra maiúscula e o restante com minúscula
+    for (var i = 0; i < palavras.length; i++) {
+        // Verifica se a primeira letra é maiúscula e o restante minúscula
+        var palavra = palavras[i];
+        if (!/^[A-Z][a-z]+$/.test(palavra)) {
             return false;
         }
-
-        // Verifica se cada parte do nome começa com letra maiúscula e é seguida de letras minúsculas
-        for (var i = 0; i < amount; i++) {
-            if (splitStr[i].match(/^(?!da|de|do|das|dos)[A-Z][a-z]+$/)) {
-                // ^(?!da|de|do|das|dos) -> Garante que palavras pequenas (como "da", "de", etc.) não precisem ser validadas com letra maiúscula
-                return false; // Retorna falso se algum nome não estiver correto
-            }
-        }
-
-        return true; // Nome válido
     }
+
+    return true; // Nome válido
+}
+
 
     // Função para validar o telefone (formato simples de exemplo)
     function validarTelefone(telefone) {
