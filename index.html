@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressoes Regulares </title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <div class="btn">
+        <h1>Entrar em contato</h1>
+         
+        <span>
+            <input type="checkbox" id="aceite-termos" name="aceito" required>Eu aceito os <a href="termos.html" target="_blank">termos e condições</a>.
+        </span>
+    </div><!--btn-->
+
+    <!-- Janela modal do formulário -->
+    <div class="bg">
+        <div class="form">
+            <div class="closeBtn" title="Fechar">X</div>
+            <h2>Entre em contato</h2>
+        
+            <form action="" method="post" id="form1">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="telefone" placeholder="Telefone" required>
+                
+                <!-- Textarea para mensagem sobre o usuário -->
+                <textarea name="mensagem" placeholder="Fale um pouco sobre você..." rows="4"></textarea>
+        
+                <input type="submit" name="acao" value="Cadastrar">
+
+                <!-- Aceite de Termos -->
+            </form>
+        </div><!--bg-->
+    </div>
+
+    <script src="js/functions.js"></script>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Desenvolvido por <a href="https://www.linkedin.com/in/lucianodev" target="_blank">LucianoDev</a> - Todos os direitos reservados &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
